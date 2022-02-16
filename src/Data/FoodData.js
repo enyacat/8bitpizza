@@ -1,10 +1,3 @@
-export function formatPrice(price) {
-    return price.toLocaleString('en-AU', {
-        style: 'currency',
-        currency: 'AUD'
-    })
-}
-
 export const foodItems = [
     {
         name: 'Garlic bread',
@@ -375,3 +368,10 @@ export const foods = foodItems.reduce((res, food) => {
     res[food.section].push(food)
     return res;
 }, {})
+
+export function formatPrice(price) {
+    return price.toLocaleString('en-AU', {
+        style: 'currency',
+        currency: 'AUD'
+    })
+}
