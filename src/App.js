@@ -1,14 +1,15 @@
 import './App.css';
 import "nes.css/css/nes.min.css";
 
+import Title from './Components/Title';
+
 function App() {
   return (
     <div className="App">
-      <h1>Hmmm Pizza</h1>
-      <button>I'm a button</button>
+      <Title />
 
     </div>
-  );
+  )
 }
 
 export default App;
