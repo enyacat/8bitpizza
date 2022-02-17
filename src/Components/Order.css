@@ -24,6 +24,6 @@
 .order-item {
     padding: 10px 0px;
     display: grid;
-    grid-template-columns: 20px 150px 20px 60px;
+    grid-template-columns: 20px 150px 20px 80px;
     justify-content: space-between;
 }

@@ -56,5 +56,10 @@
 }
 
 .ingredient:hover {
-    height: 4rem;
+    height: 6rem;
+}
+
+.extra-topping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

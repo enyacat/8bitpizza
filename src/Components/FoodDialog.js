@@ -3,7 +3,9 @@ import "./FoodDialog.css"
 import { useState } from "react";
 
 import { formatPrice } from "../Data/FoodData";
-import { QuantityInput } from "./QuantityInput"
+import { QuantityInput } from "./QuantityInput";
+import { useToppings } from "./Toppings"
+import { Toppings } from "./Toppings"
 
 function useQuantity(defaultQuantity) {
     const [value, setValue] = useState(defaultQuantity || 1);
@@ -32,7 +34,7 @@ export function getPrice(order) {
     return order.quantity * order.price
 }
 
-function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
+function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, toppings, checkToppings }) {
     const quantityRelated = useQuantity(openFood && openFood.quantity);
     // const toppings = useToppings(openFood.toppings);
     function close() {
@@ -42,11 +44,8 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
     const order = {
         ...openFood,
         quantity: quantityRelated.value,
-        // toppings: toppings.toppings
+        toppings: toppings
     }
-
-
-
 
     function addToOrder() {
         setOrders([...orders, order]);
@@ -70,10 +69,11 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
                 <div className="dialog-content">
                     <div>Ingredient: <textarea className="ingredient">{openFood.ingredients}</textarea></div>
                     <QuantityInput quantityRelated={quantityRelated} />
-                    {/* {hasToppings(openFood) && <>
-                        <h3> Extra Toppings </h3>
-                        <Toppings {...toppings} />
-                    </>} */}
+
+                    {hasToppings(openFood) && <div className="ingredient">
+                        <div> Extra Toppings </div>
+                        <Toppings toppings={toppings} checkToppings={checkToppings} />
+                    </div>}
                 </div>
                 <div className="dialog-footer">
                     <button type="button" className="nes-btn is-error" onClick={addToOrder}>Add to order:{formatPrice(getPrice(order))}

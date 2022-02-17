@@ -1,0 +1,14 @@
+.topping-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.topping-content {
+    height: 4rem;
+    overflow: scroll;
+}
+
+.extra-topping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
