@@ -4,11 +4,15 @@
 }
 
 .topping-content {
-    height: 4rem;
+    height: 10rem;
     overflow: scroll;
 }
 
 .toppings {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.topping-section {
+    font-size: 1.5rem;
 }
