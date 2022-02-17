@@ -2,7 +2,7 @@
     position: fixed;
     right: 0px;
     top: 50px;
-    width: 340px;
+    width: 30vw;
     background-color: white;
     height: calc(100% - 48px);
     z-index: 10;

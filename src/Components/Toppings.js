@@ -60,13 +60,15 @@ export function Toppings({ toppings, checkToppings }) {
         <div className="topping-content">
             {toppings.map(
                 (topping, i) => (
-                    <div className="toppings">
-                        {(i === 0 || topping.section !== toppings[i - 1].section) ? <div className="topping-section">{topping.section}</div> : null}
-                        <input type="checkbox" className="topping-checkbox" checked={topping.checked} onClick={() => { checkToppings(i) }} />
+                    <>
+                        <><div>{(i === 0 || topping.section !== toppings[i - 1].section) ? <div className="topping-section">{topping.section}</div> : null}</div></>
+                        <div className="toppings">
+                            <input type="checkbox" className="topping-checkbox" checked={topping.checked} onClick={() => { checkToppings(i) }} />
 
-                        <div>{topping.name}</div>
-                        <div>{formatPrice(topping.price)}</div>
-                    </div>
+                            <div>{topping.name}</div>
+                            <div>{formatPrice(topping.price)}</div>
+                        </div>
+                    </>
                 )
             )}
         </div>

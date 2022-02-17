@@ -1,11 +1,11 @@
 .dialog {
-    width: 500px;
+    width: 50vw;
     background-color: white;
     position: fixed;
-    top: 75px;
+    top: 5vh;
     z-index: 5;
-    max-height: calc(100% - 100px);
-    left: calc(50% - 250px);
+    max-height: calc(100% - 20vh);
+    left: 10vw;
 }
 
 .dialog-shadow {
@@ -45,6 +45,7 @@
     height: 60px;
     display: flex;
     justify-content: center;
+    background-color: #ffffff;
 }
 
 .ingredient {
