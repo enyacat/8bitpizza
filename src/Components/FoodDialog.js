@@ -23,6 +23,15 @@ function useQuantity(defaultQuantity) {
     };
 }
 
+export function getPrice(order) {
+    // const tPrice = Object.values(order.toppings)
+    //     .filter(t => t.checked)
+    //     .map(t => t.price)
+    //     .reduce((totalToppingPrice, toppingPrice) => totalToppingPrice + toppingPrice, 0)
+    // return order.quantity * (order.price + tPrice)
+    return order.quantity * order.price
+}
+
 function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
     const quantityRelated = useQuantity(openFood && openFood.quantity);
     // const toppings = useToppings(openFood.toppings);
@@ -67,7 +76,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
                     </>} */}
                 </div>
                 <div className="dialog-footer">
-                    <button type="button" className="nes-btn is-error" onClick={addToOrder}>Add to order:
+                    <button type="button" className="nes-btn is-error" onClick={addToOrder}>Add to order:{formatPrice(getPrice(order))}
                     </button>
                 </div>
             </div>
