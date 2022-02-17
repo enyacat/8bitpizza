@@ -75,7 +75,7 @@ export const foodItems = [
         name: 'Bolognese',
         img: '/img/traditional/Bolognese.jpeg',
         section: 'Traditional pizza',
-        ingredients: 'Tom And Garlic Mix Base , Beef Mince, Tomato, Onion, Cheese And Herbs',
+        ingredients: 'Tom And Garlic Mix Base, Beef Mince, Tomato, Onion, Cheese And Herbs',
         price: 13
 
     },
@@ -123,7 +123,7 @@ export const foodItems = [
         name: 'Peri-Peri Chicken',
         img: '/img/gourmet/Peri_Peri_Chicken.jpeg',
         section: 'Gourmet pizza',
-        ingredients: 'Tom Base, Chicken , Caramelized Onion, Red Capsicum, Shallots, Cheese (Topped With Peri Peri Sauce)',
+        ingredients: 'Tom Base, Chicken, Caramelized Onion, Red Capsicum, Shallots, Cheese (Topped With Peri Peri Sauce)',
         price: 15
 
     },

@@ -12,7 +12,7 @@ export default function Menu({ openFood, setOpenFood }) {
                     <h1>{sectionName}</h1>
                     <div className="food-grid">
                         {foods.map(food => (
-                            <div className='food'
+                            <div key={food.name} className='food'
                                 img={food.img}
                                 style={{
                                     backgroundImage: `url("${food.img}")`

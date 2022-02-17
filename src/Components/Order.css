@@ -1,0 +1,22 @@
+.order-area {
+    position: fixed;
+    right: 0px;
+    top: 50px;
+    width: 340px;
+    background-color: white;
+    height: calc(100% - 48px);
+    z-index: 10;
+    box-shadow: 4px 0px 5px 4px grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-content {
+    padding: 20px;
+    height: 100%;
+}
+
+.order-container {
+    padding: 10px 0px;
+    border-bottom: 1px solid grey;
+}
