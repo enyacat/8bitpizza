@@ -59,7 +59,3 @@
     height: 6rem;
 }
 
-.extra-topping {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}

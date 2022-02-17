@@ -6,7 +6,7 @@ import { getPrice } from "./FoodDialog"
 
 export function Order({ orders, setOrders }) {
 
-    return (< div className="order-area" >
+    return (< div className="nes-container is-rounded order-area" >
         {
             orders.length === 0 ? (
                 <div className="order-content">Your order is empty...</div>) : (

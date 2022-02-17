@@ -6,7 +6,6 @@
     background-color: white;
     height: calc(100% - 48px);
     z-index: 10;
-    box-shadow: 4px 0px 5px 4px grey;
     display: flex;
     flex-direction: column;
 }

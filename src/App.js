@@ -7,18 +7,18 @@ import Menu from './Components/Menu';
 import { Order } from './Components/Order';
 import { FoodDialog } from './Components/FoodDialog'
 import { useToppings } from './Components/Toppings'
-import { foodItems } from './Data/FoodData';
 
 function App() {
   const [openFood, setOpenFood] = useState();
   const [orders, setOrders] = useState([]);
-  const { toppings, setToppings, checkToppings } = useToppings();
+  const { toppings, setToppings, checkToppings, checkDefaultTps, defaultTps, setDefaultTps } = useToppings();
+
 
   return (
     <div className="App">
       <Title />
-      <FoodDialog openFood={openFood} setOpenFood={setOpenFood} orders={orders} setOrders={setOrders} toppings={toppings} setToppings={setToppings} checkToppings={checkToppings} />
-      <Menu openFood={openFood} setOpenFood={setOpenFood} />
+      <FoodDialog openFood={openFood} setOpenFood={setOpenFood} orders={orders} setOrders={setOrders} toppings={toppings} setToppings={setToppings} checkToppings={checkToppings} defaultTps={defaultTps} checkDefaultTps={checkDefaultTps} />
+      <Menu setOpenFood={setOpenFood} setDefaultTps={setDefaultTps} />
       <Order orders={orders} setOrders={setOrders} />
 
     </div>

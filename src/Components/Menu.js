@@ -3,7 +3,9 @@ import './Menu.css'
 import { foods } from "../Data/FoodData"
 import { formatPrice } from '../Data/FoodData';
 
-export default function Menu({ openFood, setOpenFood }) {
+
+export default function Menu({ setOpenFood }) {
+
     return (
         <div className='menu'>
 
