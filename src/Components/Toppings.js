@@ -76,7 +76,7 @@ export function Toppings({ toppings, checkToppings }) {
 }
 
 export function ListDefaultTps({ defaultTps, checkDefaultTps, setOpenFood, openFood }) {
-    console.log('hi here is openFood', openFood)
+
     function checkDefaultTps(i) {
         setOpenFood({
             ...openFood, defaultToppings:

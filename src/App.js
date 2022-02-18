@@ -12,14 +12,18 @@ function App() {
   const [openFood, setOpenFood] = useState();
   const [orders, setOrders] = useState([]);
   const { toppings, setToppings, checkToppings, checkDefaultTps, defaultTps, setDefaultTps } = useToppings();
-
+  const onRemove = (idx) => {
+    var orderArr = [...orders]
+    orderArr.splice(idx, 1)
+    setOrders(orderArr)
+  }
 
   return (
     <div className="App">
       <Title />
       <FoodDialog openFood={openFood} setOpenFood={setOpenFood} orders={orders} setOrders={setOrders} toppings={toppings} setToppings={setToppings} checkToppings={checkToppings} defaultTps={defaultTps} checkDefaultTps={checkDefaultTps} />
       <Menu setOpenFood={setOpenFood} setDefaultTps={setDefaultTps} />
-      <Order orders={orders} setOrders={setOrders} />
+      <Order orders={orders} setOrders={setOrders} onRemove={onRemove} />
 
     </div>
   )
