@@ -27,12 +27,11 @@ function useQuantity(defaultQuantity) {
 }
 
 export function getPrice(order) {
-    // const tPrice = Object.values(order.toppings)
-    //     .filter(t => t.checked)
-    //     .map(t => t.price)
-    //     .reduce((totalToppingPrice, toppingPrice) => totalToppingPrice + toppingPrice, 0)
-    // return order.quantity * (order.price + tPrice)
-    return order.quantity * order.price
+    const tPrice = order.toppings
+        .filter(t => t.checked)
+        .map(t => t.price)
+        .reduce((totalTPrice, price) => totalTPrice + price, 0)
+    return order.quantity * (order.price + tPrice)
 }
 
 function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, toppings, checkToppings, defaultTps, checkDefaultTps }) {
