@@ -24,6 +24,10 @@ export function Order({ orders, setOrders }) {
                                 <div>{order.name}</div>
                                 <div />
                                 <div>{formatPrice(getPrice(order))}</div>
+                                <div>Current</div>
+                                <div>{order.defaultToppings.filter(t => t.checked).map(t => t.name).join(',')}</div>
+                                <div />
+                                <div />
                                 <div>Extra</div>
                                 <div>{order.toppings.filter(topping => topping.checked).map(t => t.name).join(',')}</div>
                                 <div />
