@@ -57,30 +57,40 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
         return food.section.includes('pizza');
     }
 
+    function isDessertPizza(food) {
+        return food.name.includes('Nutella')
+    }
+
     function selectSize(e) {
         if (openFood.section === 'Traditional pizza') {
             if (e.target.checked && e.target.value === "medium") {
-                setOpenFood({ ...openFood, price: 13 })
+                setOpenFood({ ...openFood, price: 13, size: e.target.value })
             } else if (e.target.checked && e.target.value === "large") {
-                setOpenFood({ ...openFood, price: 15 })
+                setOpenFood({ ...openFood, price: 15, size: e.target.value })
             } else if (e.target.checked && e.target.value === "family") {
-                setOpenFood({ ...openFood, price: 20 })
+                setOpenFood({ ...openFood, price: 20, size: e.target.value })
             }
         } else if (openFood.section === 'Gourmet pizza') {
             if (e.target.checked && e.target.value === "medium") {
-                setOpenFood({ ...openFood, price: 15 })
+                setOpenFood({ ...openFood, price: 15, size: e.target.value })
             } else if (e.target.checked && e.target.value === "large") {
-                setOpenFood({ ...openFood, price: 17 })
+                setOpenFood({ ...openFood, price: 17, size: e.target.value })
             } else if (e.target.checked && e.target.value === "family") {
-                setOpenFood({ ...openFood, price: 23 })
+                setOpenFood({ ...openFood, price: 23, size: e.target.value })
             }
         } else if (openFood.section === 'Seafood pizza') {
             if (e.target.checked && e.target.value === "medium") {
-                setOpenFood({ ...openFood, price: 16 })
+                setOpenFood({ ...openFood, price: 16, size: e.target.value })
             } else if (e.target.checked && e.target.value === "large") {
-                setOpenFood({ ...openFood, price: 18 })
+                setOpenFood({ ...openFood, price: 18, size: e.target.value })
             } else if (e.target.checked && e.target.value === "family") {
-                setOpenFood({ ...openFood, price: 24 })
+                setOpenFood({ ...openFood, price: 24, size: e.target.value })
+            }
+        } else if (openFood.section === 'Desserts') {
+            if (e.target.checked && e.target.value === "large") {
+                setOpenFood({ ...openFood, price: 14, size: e.target.value })
+            } else if (e.target.checked && e.target.value === "family") {
+                setOpenFood({ ...openFood, price: 20, size: e.target.value })
             }
         }
 
@@ -107,6 +117,20 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                 <div className="dialog-content">
                     <div>Ingredient: <textarea className="ingredient">{openFood.ingredients}</textarea></div>
                     <QuantityInput quantityRelated={quantityRelated} />
+
+                    {isDessertPizza(openFood) && <div>
+                        <div className="size">
+                            <label>
+                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="large" />
+                                <span>Large</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="family" />
+                                <span>Family</span>
+                            </label>
+                        </div>
+                    </div>}
 
                     {hasToppings(openFood) && <div>
                         <div className="size">

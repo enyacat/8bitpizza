@@ -57,10 +57,10 @@ export function Order({ orders, setOrders, onRemove }) {
                             <div className="order-item">
                                 <div>{order.quantity}</div>
                                 <div>{order.name}</div>
-                                <div />
+                                <div>{order.size}</div>
                                 <div>{formatPrice(getPrice(order))}</div>
-                                {hasToppings(order) && <><div>Current</div>
-                                    <div>{order.defaultToppings.filter(t => t.checked).map(t => t.name).join(',')}</div>
+                                {hasToppings(order) && <><div></div>
+                                    <div>- 1 x  {order.defaultToppings.filter(t => (t.checked === false)).map(t => t.name).join(',')}</div>
                                     <div />
                                     <div />
                                     <div>Extra</div>
