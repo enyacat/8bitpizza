@@ -57,6 +57,44 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
         return food.section.includes('pizza');
     }
 
+    function selectSize(e) {
+        if (openFood.section === 'Traditional pizza') {
+            if (e.target.checked && e.target.value === "medium") {
+                setOpenFood({ ...openFood, price: 13 })
+            } else if (e.target.checked && e.target.value === "large") {
+                setOpenFood({ ...openFood, price: 15 })
+            } else if (e.target.checked && e.target.value === "family") {
+                setOpenFood({ ...openFood, price: 20 })
+            }
+        } else if (openFood.section === 'Gourmet pizza') {
+            if (e.target.checked && e.target.value === "medium") {
+                setOpenFood({ ...openFood, price: 15 })
+            } else if (e.target.checked && e.target.value === "large") {
+                setOpenFood({ ...openFood, price: 17 })
+            } else if (e.target.checked && e.target.value === "family") {
+                setOpenFood({ ...openFood, price: 23 })
+            }
+        } else if (openFood.section === 'Seafood pizza') {
+            if (e.target.checked && e.target.value === "medium") {
+                setOpenFood({ ...openFood, price: 16 })
+            } else if (e.target.checked && e.target.value === "large") {
+                setOpenFood({ ...openFood, price: 18 })
+            } else if (e.target.checked && e.target.value === "family") {
+                setOpenFood({ ...openFood, price: 24 })
+            }
+        }
+
+    }
+
+    // function selectLarge() {
+    //     setOpenFood({ ...openFood, price: openFood.price + 2 })
+    // }
+
+    // function selectFamily() {
+    //     setOpenFood({ ...openFood, price: openFood.price + 6 })
+    // }
+
+
     return (
         openFood ? (<>
             <div className="dialog-shadow" onClick={close}></div>
@@ -71,6 +109,22 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                     <QuantityInput quantityRelated={quantityRelated} />
 
                     {hasToppings(openFood) && <div>
+                        <div className="size">
+                            <label>
+                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="medium" />
+                                <span>Medium</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="large" />
+                                <span>Large</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="family" />
+                                <span>Family</span>
+                            </label>
+                        </div>
                         <div>Current Toppings</div>
                         <ListDefaultTps defaultTps={openFood.defaultToppings} checkDefaultTps={checkDefaultTps} openFood={openFood} setOpenFood={setOpenFood} />
                         <div> Extra Toppings </div>

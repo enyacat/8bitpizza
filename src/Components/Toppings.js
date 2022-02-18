@@ -60,15 +60,15 @@ export function Toppings({ toppings, checkToppings }) {
         <div className="topping-content">
             {toppings.map(
                 (topping, i) => (
-                    <>
+                    <div key={topping.name}>
                         <><div>{(i === 0 || topping.section !== toppings[i - 1].section) ? <div className="topping-section">{topping.section}</div> : null}</div></>
                         <div className="toppings">
-                            <input type="checkbox" className="topping-checkbox" checked={topping.checked} onClick={() => { checkToppings(i) }} />
+                            <input type="checkbox" className="topping-checkbox" checked={topping.checked} onChange={() => { checkToppings(i) }} />
 
                             <div>{topping.name}</div>
                             <div>{formatPrice(topping.price)}</div>
                         </div>
-                    </>
+                    </div>
                 )
             )}
         </div>
@@ -94,8 +94,8 @@ export function ListDefaultTps({ defaultTps, checkDefaultTps, setOpenFood, openF
         <div className="topping-content">
             {openFood.defaultToppings.map(
                 (topping, i) => (
-                    <div className="toppings">
-                        <input type="checkbox" className="topping-checkbox" checked={topping.checked} onClick={() => { checkDefaultTps(i) }} />
+                    <div key={topping.name} className="toppings">
+                        <input type="checkbox" className="topping-checkbox" checked={topping.checked} onChange={() => { checkDefaultTps(i) }} />
                         <div>{topping.name}</div>
                     </div>
                 )

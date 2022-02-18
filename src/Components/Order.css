@@ -25,4 +25,5 @@
     display: grid;
     grid-template-columns: 20px 150px 20px 80px;
     justify-content: space-between;
+    font-size: 0.6rem;
 }

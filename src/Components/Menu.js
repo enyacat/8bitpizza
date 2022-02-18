@@ -10,12 +10,12 @@ export default function Menu({ setOpenFood }) {
         <div className='menu'>
 
             {Object.entries(foods).map(([sectionName, foods]) => (
-                <>
+                <div key={sectionName}>
                     <h1>{sectionName}</h1>
                     <div className="food-grid">
                         {foods.map(food => (
 
-                            <div className='food'
+                            <div key={food.name} className='food'
                                 img={food.img}
                                 style={{
                                     backgroundImage: `url("${food.img}")`
@@ -31,7 +31,7 @@ export default function Menu({ setOpenFood }) {
                         )
                         )}
                     </div>
-                </>)
+                </div>)
             )
             }
         </div >

@@ -6,6 +6,7 @@
     z-index: 5;
     max-height: calc(100% - 20vh);
     left: 10vw;
+    overflow: scroll;
 }
 
 .dialog-shadow {
@@ -60,3 +61,11 @@
     height: 6rem;
 }
 
+.size {
+    background-color:#ff7f50;
+    padding: 1rem 0;
+}
+
+.size:hover {
+    background-color: ;
+}
