@@ -1,0 +1,88 @@
+.nav-bar-container {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 4rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    z-index: 15;
+    justify-content: space-around;
+
+}
+
+.nav-bar-container div:hover {
+    background-color: rgb(198, 227, 253);
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    width: 7rem;
+}
+
+#Starters::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Traditional-pizza::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Gourmet-pizza::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Seafood-pizza::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Pasta::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Salads::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Dessert::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Deals::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }
+
+#Beverages::before {
+    content: "";
+    display: block;
+    height: 4rem; /* fixed header height*/
+    margin: -4rem 0 0; /* negative fixed header height */
+  }

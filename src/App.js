@@ -7,6 +7,7 @@ import Menu from './Components/Menu';
 import { Order } from './Components/Order';
 import { FoodDialog } from './Components/FoodDialog'
 import { useToppings } from './Components/Toppings'
+import { NavBar } from './Components/NavBar'
 
 function App() {
   const [openFood, setOpenFood] = useState();
@@ -19,12 +20,14 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Title />
-      <FoodDialog openFood={openFood} setOpenFood={setOpenFood} orders={orders} setOrders={setOrders} toppings={toppings} setToppings={setToppings} checkToppings={checkToppings} defaultTps={defaultTps} checkDefaultTps={checkDefaultTps} />
-      <Menu setOpenFood={setOpenFood} setDefaultTps={setDefaultTps} />
-      <Order orders={orders} setOrders={setOrders} onRemove={onRemove} />
-
+    <div>
+      <div className="App">
+        <Title />
+        <NavBar />
+        <FoodDialog openFood={openFood} setOpenFood={setOpenFood} orders={orders} setOrders={setOrders} toppings={toppings} setToppings={setToppings} checkToppings={checkToppings} defaultTps={defaultTps} checkDefaultTps={checkDefaultTps} />
+        <Menu setOpenFood={setOpenFood} setDefaultTps={setDefaultTps} />
+        <Order orders={orders} setOrders={setOrders} onRemove={onRemove} />
+      </div>
     </div>
   )
 }

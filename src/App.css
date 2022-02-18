@@ -10,7 +10,10 @@
 * { font-family: 'kongtextregular', Arial, sans-serif; }
 
 
+
+
+
 .App {
-
+  padding-top: 4rem; 
+  height: 820vh;
 }
-

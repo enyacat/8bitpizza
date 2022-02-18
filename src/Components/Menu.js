@@ -10,8 +10,9 @@ export default function Menu({ setOpenFood }) {
         <div className='menu'>
 
             {Object.entries(foods).map(([sectionName, foods]) => (
-                <div key={sectionName}>
-                    <h1>{sectionName}</h1>
+                <div key={sectionName} >
+                    <hr />
+                    <h1 id={sectionName}>{sectionName}</h1>
                     <div className="food-grid">
                         {foods.map(food => (
 
