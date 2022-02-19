@@ -55,7 +55,7 @@ export function Order({ orders, setOrders, onRemove }) {
                 <div className="order-content">
                     <div className="order-container">Your Order</div>
                     {orders.map((order, i) => (
-                        <div key={order.name} className="order-container">
+                        <div className="order-container">
                             <div className="order-item">
                                 <div>{order.quantity}</div>
                                 <div>{order.name}</div>
@@ -70,8 +70,6 @@ export function Order({ orders, setOrders, onRemove }) {
                                     <div />
                                     <div />
                                 </>}
-
-
                                 <div />
                                 <button type="button" className="nes-btn is-error" onClick={() => onRemove(i)}>Remove</button>
                                 <div />

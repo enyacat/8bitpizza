@@ -90,20 +90,6 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                         <Choices openFood={openFood} choiceValue={choiceValue} setChoiceValue={setChoiceValue} setOpenFood={setOpenFood} /></div>}
                     <QuantityInput quantityRelated={quantityRelated} />
 
-                    {/* {isDessertPizza(openFood) && <div>
-                        <div className="size">
-                            <label>
-                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="large" />
-                                <span>Large</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="family" />
-                                <span>Family</span>
-                            </label>
-                        </div>
-                    </div>} */}
-
                     {hasToppings(openFood) && <div>
 
                         <div>Current Toppings</div>
