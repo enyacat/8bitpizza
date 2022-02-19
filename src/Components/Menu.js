@@ -13,7 +13,7 @@ export default function Menu({ setOpenFood }) {
                 <div key={sectionName} >
                     <hr />
                     <h1 id={sectionName}>{sectionName}</h1>
-                    <div className="food-grid">
+                    <div className="food-grid nes-pointer">
                         {foods.map(food => (
 
                             <div key={food.name} className='food'

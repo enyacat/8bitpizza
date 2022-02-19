@@ -36,8 +36,8 @@
     margin-top: 1rem;
 }
 
-/* .remove {
-    position: fixed;
-    right: 1rem;
-} */
+.remove {
+    font-size: 0.75rem;
+    width: 6rem;
+}
 
