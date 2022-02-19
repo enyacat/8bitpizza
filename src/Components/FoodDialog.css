@@ -49,6 +49,10 @@
     background-color: #ffffff;
 }
 
+.dialog-footer button:disabled {
+    cursor: not-allowed;
+}
+
 .ingredient {
     height: 2rem;
     width: 100%;

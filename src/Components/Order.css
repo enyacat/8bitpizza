@@ -10,10 +10,11 @@
     flex-direction: column;
     overflow: auto;
     height: 80vh;
+    padding-bottom: 2rem;
 }
 
 .order-content {
-    padding: 20px;
+    padding: 2rem;
     height: 100%;
 }
 

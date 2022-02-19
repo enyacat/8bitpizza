@@ -60,9 +60,6 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
         return food.section.includes('pizza');
     }
 
-    function isDessertPizza(food) {
-        return food.name.includes('Nutella')
-    }
 
     return (
         openFood ? (<>
@@ -87,7 +84,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                     </div>}
                 </div>
                 <div className="dialog-footer">
-                    <button type="button" className="nes-btn is-error" onClick={addToOrder}>Add to order:{formatPrice(getPrice(order))}
+                    <button type="button" className="nes-btn is-error" disabled={openFood.choices && !openFood.choice} onClick={addToOrder}>Add to order:{formatPrice(getPrice(order))}
                     </button>
                 </div>
             </div>
