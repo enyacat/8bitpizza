@@ -45,7 +45,8 @@ export const foodItems = [
         section: 'Traditional-pizza',
         ingredients: 'Napolitana Sauce, Cheese, Oregano',
         price: 13,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Napolitana Sauce", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Garnish", name: "Oregano", price: 0 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Napolitana Sauce", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Garnish", name: "Oregano", price: 0 }],
+        choices: ["Medium", "Large", "Family"]
     },
     {
         name: 'Pepperoni',
@@ -53,7 +54,8 @@ export const foodItems = [
         section: 'Traditional-pizza',
         ingredients: 'Hot Peperoni',
         price: 13,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -62,7 +64,8 @@ export const foodItems = [
         section: 'Traditional-pizza',
         ingredients: 'Ham And Pineapple',
         price: 13,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -71,7 +74,8 @@ export const foodItems = [
         section: 'Traditional-pizza',
         ingredients: 'Ham, Bacon, Egg',
         price: 13,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }, { checked: true, section: "Meat", name: "Bacon", price: 2 }, { checked: true, section: "Meat", name: "Egg", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }, { checked: true, section: "Meat", name: "Bacon", price: 2 }, { checked: true, section: "Meat", name: "Egg", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -80,7 +84,8 @@ export const foodItems = [
         section: 'Traditional-pizza',
         ingredients: 'Tom And Garlic Mix Base, Beef Mince, Tomato, Onion, Cheese And Herbs',
         price: 13,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { checked: true, section: "Meat", name: "Beef", price: 2 }, { checked: true, section: "Sauce", name: "Garlic Base", price: 0 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { checked: true, section: "Meat", name: "Beef", price: 2 }, { checked: true, section: "Sauce", name: "Garlic Base", price: 0 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -89,7 +94,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Tom Base, Ham Pepperoni, Mushroom, Onion, Capsicum, Pineapple, Cheese',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -98,7 +104,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'BBQ Base, Chicken, Mushroom, Onion, Pineapple, Cheese',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "BBQ Sauce Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: "Meat", name: "Chicken", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "BBQ Sauce Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: "Meat", name: "Chicken", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -107,7 +114,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Tom Base, Pepperoni, Mushroom,Onion, Capsicum, Jalapenos, Cheese, Chilli Flakes',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Jalapenos", price: 1 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }, { checked: true, section: "Garnish", name: "Chilli Flakes", price: 0 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Jalapenos", price: 1 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }, { checked: true, section: "Garnish", name: "Chilli Flakes", price: 0 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -116,7 +124,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'BBQ Base, Ham Pepperoni, Cabanossis, Bacon, Cheese',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "BBQ Sauce Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }, { checked: true, section: "Meat", name: "Bacon", price: 2 }, { checked: true, section: "Meat", name: "Cabanossi", price: 2 }, { checked: true, section: "Meat", name: "Beef", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "BBQ Sauce Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Meat', name: "Ham", price: 2 }, { checked: true, section: "Meat", name: "Hot Pepperoni", price: 2 }, { checked: true, section: "Meat", name: "Bacon", price: 2 }, { checked: true, section: "Meat", name: "Cabanossi", price: 2 }, { checked: true, section: "Meat", name: "Beef", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -125,7 +134,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Garlic Base, Lamb, Tomato, Onion, Capsicum, Cheese, Oregano (Topped With Mint Yoghurt And Lemon Wedge)',
         price: 15,
-        defaultToppings: []
+        defaultToppings: [],
+        choices: ["Medium", "Large", "Family"]
     },
     {
         name: 'Peri-Peri Chicken',
@@ -133,7 +143,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Tom Base, Chicken, Caramelized Onion, Red Capsicum, Shallots, Cheese (Topped With Peri Peri Sauce)',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Garnish", name: "Peri-Peri Sauce Base", price: 1 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { checked: true, section: "Meat", name: "Chicken", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Garnish", name: "Peri-Peri Sauce Base", price: 1 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { checked: true, section: "Meat", name: "Chicken", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -142,7 +153,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Tom Base, Mushroom, Tomatoes, Red Capsicum, Onion, Pineapple, Cheese, Olives (Topped With Pesto Aioli)',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Olives", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Olives", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -151,7 +163,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Tom Base, Tomato, Onion, Shallots, Cheese, Olive, Feta, Oregano',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Feta Cheese", price: 2 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Olives", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Shallots", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { checked: true, section: "Garnish", name: "Oregano", price: 0 }, { checked: true, section: "Sauce", name: "Garlic Base", price: 0 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: true, section: "Cheese", name: "Feta Cheese", price: 2 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Olives", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Shallots", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { checked: true, section: "Garnish", name: "Oregano", price: 0 }, { checked: true, section: "Sauce", name: "Garlic Base", price: 0 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -160,7 +173,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Chicken, Mushroom, Onion And Capsicum On A Tandoori Sauce Base',
         price: 15,
-        defaultToppings: [{ checked: true, section: "Sauce", name: "Tandoori Sauce Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Meat", name: "Chicken", price: 2 }]
+        defaultToppings: [{ checked: true, section: "Sauce", name: "Tandoori Sauce Base", price: 0 }, { checked: true, section: "Cheese", name: "Cheese", price: 2 }, { checked: true, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: true, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: true, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: true, section: "Meat", name: "Chicken", price: 2 }],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -169,7 +183,8 @@ export const foodItems = [
         section: 'Gourmet-pizza',
         ingredients: 'Tom Base, Zucchini, Red Capsicum, Eggplant, Cheese, Olive, Feta (Topped With Pesto Aioli)',
         price: 15,
-        defaultToppings: []
+        defaultToppings: [],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -178,7 +193,8 @@ export const foodItems = [
         section: 'Seafood-pizza',
         ingredients: 'Tom Base, Red Capsicum, Shallots, Sundried Tomatoes, Cheese, Garlic Marinated Prawns, Feta, (Served With Lemon Wedges)',
         price: 16,
-        defaultToppings: []
+        defaultToppings: [],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -187,7 +203,8 @@ export const foodItems = [
         section: 'Seafood-pizza',
         ingredients: 'Sweet-Chilli Sauce Base, Green Capsicum, Shallots, Cheese, Szechuan Seasoning Marinated Prawns(Served With Lemon Wedges)',
         price: 16,
-        defaultToppings: []
+        defaultToppings: [],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -196,7 +213,8 @@ export const foodItems = [
         section: 'Seafood-pizza',
         ingredients: 'Garlic Base, Chilli Sauce Marinated Prawns, Cheese (Served With Fresh Shallots And Lemon Wedges)',
         price: 16,
-        defaultToppings: []
+        defaultToppings: [],
+        choices: ["Medium", "Large", "Family"]
 
     },
     {
@@ -204,7 +222,8 @@ export const foodItems = [
         img: '/img/coming_soon.png',
         section: 'Pasta',
         ingredients: 'Garlic, Mushroom, Onion, Capsicum, Olives, Eggplant, Tomato Sauce (Served With Parmesan-Cheese And Fresh Shallots)',
-        price: 12
+        price: 12,
+        choices: ["Fettuccine", "Penne"]
 
     },
     {
@@ -212,7 +231,8 @@ export const foodItems = [
         img: '/img/coming_soon.png',
         section: 'Pasta',
         ingredients: 'Beef Mince, Garlic Tomato (Served With Parmesan-Cheese And Fresh Shallots)',
-        price: 12
+        price: 12,
+        choices: ["Fettuccine", "Penne"]
 
     },
     {
@@ -220,7 +240,8 @@ export const foodItems = [
         img: '/img/coming_soon.png',
         section: 'Pasta',
         ingredients: 'Garlic, Chicken, Mushroom, Beef Cubes (Served With Parmesan-Cheese And Fresh Shallots)',
-        price: 12
+        price: 12,
+        choices: ["Fettuccine", "Penne"]
 
     },
     {
@@ -228,7 +249,8 @@ export const foodItems = [
         img: '/img/coming_soon.png',
         section: 'Pasta',
         ingredients: 'Garlic, Mushroom, Ham, Bacon, Beef Cubes, Creamy Sauce(Served With Parmesan-Cheese And Fresh Shallots)',
-        price: 12
+        price: 12,
+        choices: ["Fettuccine", "Penne"]
 
     },
     {
@@ -236,7 +258,8 @@ export const foodItems = [
         img: '/img/coming_soon.png',
         section: 'Pasta',
         ingredients: 'Garlic, Bacon, Mushroom, Beef Cubes, Egg (Served With Parmesan-Cheese And Fresh Shallots)',
-        price: 12
+        price: 12,
+        choices: ["Fettuccine", "Penne"]
 
     },
     {
@@ -244,7 +267,8 @@ export const foodItems = [
         img: '/img/desserts/Nutella_Strawberry.jpeg',
         section: 'Desserts',
         ingredients: 'Nutella and Strawberry',
-        price: 14
+        price: 14,
+        choices: ["Large", "Family"]
 
     },
     {
@@ -252,7 +276,8 @@ export const foodItems = [
         img: '/img/coming_soon.png',
         section: 'Desserts',
         ingredients: 'Nutella And Oreos',
-        price: 14
+        price: 14,
+        choices: ["Large", "Family"]
 
     },
     {
@@ -260,7 +285,8 @@ export const foodItems = [
         img: '/img/desserts/Nutella_Strawberry_Oreo.jpeg',
         section: 'Desserts',
         ingredients: '',
-        price: 14
+        price: 14,
+        choices: ["Large", "Family"]
 
     },
     {
@@ -356,7 +382,8 @@ export const foodItems = [
         img: '/img/drinks.png',
         section: 'Beverages',
         ingredients: '',
-        price: 4.5
+        price: 4.5,
+        choices: ["Coke", "Coke Zero", "Diet Coke", "Fanta", "Sprite", "Lift"]
 
     },
     {
@@ -364,7 +391,8 @@ export const foodItems = [
         img: '/img/drinks.png',
         section: 'Beverages',
         ingredients: '',
-        price: 2.5
+        price: 2.5,
+        choices: ["Coke", "Coke Zero", "Diet Coke", "Fanta", "Sprite", "Lift"]
 
     },
     {

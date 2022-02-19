@@ -47,9 +47,11 @@ export function Order({ orders, setOrders, onRemove }) {
     }
 
     return (< div className="nes-container is-rounded order-area" >
+
         {
             orders.length === 0 ? (
-                <div className="order-content">Your order is empty...</div>) : (
+                <><div><img src="/img/Hamster-Pixel-Art.png" alt="" width="80rem" height="70rem" /></div>
+                    <div className="order-content">Your order is empty...</div></>) : (
                 <div className="order-content">
                     <div className="order-container">Your Order</div>
                     {orders.map((order, i) => (
@@ -57,7 +59,7 @@ export function Order({ orders, setOrders, onRemove }) {
                             <div className="order-item">
                                 <div>{order.quantity}</div>
                                 <div>{order.name}</div>
-                                <div>{order.size}</div>
+                                <div>{order.choice}</div>
                                 <div>{formatPrice(getPrice(order))}</div>
                                 {hasToppings(order) && <><div></div>
                                     <div>- 1 x  {order.defaultToppings.filter(t => (t.checked === false)).map(t => t.name).join(',')}</div>

@@ -61,11 +61,11 @@
     height: 6rem;
 }
 
-.size {
+.choice {
     background-color:#ff7f50;
     padding: 1rem 0;
 }
 
-.size:hover {
+.choice:hover {
     background-color: #cb2c29;
 }

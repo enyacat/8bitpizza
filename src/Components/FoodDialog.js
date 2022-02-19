@@ -7,6 +7,7 @@ import { QuantityInput } from "./QuantityInput";
 import { useToppings } from "./Toppings"
 import { Toppings } from "./Toppings"
 import { ListDefaultTps } from "./Toppings"
+import { Choices } from "./Choices"
 
 function useQuantity(defaultQuantity) {
     const [value, setValue] = useState(defaultQuantity || 1);
@@ -36,7 +37,8 @@ export function getPrice(order) {
 
 function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, toppings, checkToppings, defaultTps, checkDefaultTps }) {
     const quantityRelated = useQuantity(openFood && openFood.quantity);
-    // const toppings = useToppings(openFood.toppings);
+    const [choiceValue, setChoiceValue] = useState(openFood.choices)
+
     function close() {
         setOpenFood();
     }
@@ -44,7 +46,8 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
     const order = {
         ...openFood,
         quantity: quantityRelated.value,
-        toppings: toppings
+        toppings: toppings,
+        choice: choiceValue
     }
 
     function addToOrder() {
@@ -61,40 +64,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
         return food.name.includes('Nutella')
     }
 
-    function selectSize(e) {
-        if (openFood.section === 'Traditional pizza') {
-            if (e.target.checked && e.target.value === "medium") {
-                setOpenFood({ ...openFood, price: 13, size: e.target.value })
-            } else if (e.target.checked && e.target.value === "large") {
-                setOpenFood({ ...openFood, price: 15, size: e.target.value })
-            } else if (e.target.checked && e.target.value === "family") {
-                setOpenFood({ ...openFood, price: 20, size: e.target.value })
-            }
-        } else if (openFood.section === 'Gourmet pizza') {
-            if (e.target.checked && e.target.value === "medium") {
-                setOpenFood({ ...openFood, price: 15, size: e.target.value })
-            } else if (e.target.checked && e.target.value === "large") {
-                setOpenFood({ ...openFood, price: 17, size: e.target.value })
-            } else if (e.target.checked && e.target.value === "family") {
-                setOpenFood({ ...openFood, price: 23, size: e.target.value })
-            }
-        } else if (openFood.section === 'Seafood pizza') {
-            if (e.target.checked && e.target.value === "medium") {
-                setOpenFood({ ...openFood, price: 16, size: e.target.value })
-            } else if (e.target.checked && e.target.value === "large") {
-                setOpenFood({ ...openFood, price: 18, size: e.target.value })
-            } else if (e.target.checked && e.target.value === "family") {
-                setOpenFood({ ...openFood, price: 24, size: e.target.value })
-            }
-        } else if (openFood.section === 'Desserts') {
-            if (e.target.checked && e.target.value === "large") {
-                setOpenFood({ ...openFood, price: 14, size: e.target.value })
-            } else if (e.target.checked && e.target.value === "family") {
-                setOpenFood({ ...openFood, price: 20, size: e.target.value })
-            }
-        }
 
-    }
 
     // function selectLarge() {
     //     setOpenFood({ ...openFood, price: openFood.price + 2 })
@@ -115,10 +85,12 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                     <div className="dialog-banner-name">{openFood.name}</div>
                 </div>
                 <div className="dialog-content">
-                    <div>Ingredient: <textarea className="ingredient">{openFood.ingredients}</textarea></div>
+                    {openFood.ingredients && <div>Ingredient: <textarea className="ingredient">{openFood.ingredients}</textarea></div>}
+                    {openFood.choices && <div className="choice">
+                        <Choices openFood={openFood} choiceValue={choiceValue} setChoiceValue={setChoiceValue} setOpenFood={setOpenFood} /></div>}
                     <QuantityInput quantityRelated={quantityRelated} />
 
-                    {isDessertPizza(openFood) && <div>
+                    {/* {isDessertPizza(openFood) && <div>
                         <div className="size">
                             <label>
                                 <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="large" />
@@ -130,25 +102,10 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                                 <span>Family</span>
                             </label>
                         </div>
-                    </div>}
+                    </div>} */}
 
                     {hasToppings(openFood) && <div>
-                        <div className="size">
-                            <label>
-                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="medium" />
-                                <span>Medium</span>
-                            </label>
 
-                            <label>
-                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="large" />
-                                <span>Large</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" className="nes-radio" name="answer" onChange={(e) => selectSize(e)} value="family" />
-                                <span>Family</span>
-                            </label>
-                        </div>
                         <div>Current Toppings</div>
                         <ListDefaultTps defaultTps={openFood.defaultToppings} checkDefaultTps={checkDefaultTps} openFood={openFood} setOpenFood={setOpenFood} />
                         <div> Extra Toppings </div>
