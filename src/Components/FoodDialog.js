@@ -64,17 +64,6 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
         return food.name.includes('Nutella')
     }
 
-
-
-    // function selectLarge() {
-    //     setOpenFood({ ...openFood, price: openFood.price + 2 })
-    // }
-
-    // function selectFamily() {
-    //     setOpenFood({ ...openFood, price: openFood.price + 6 })
-    // }
-
-
     return (
         openFood ? (<>
             <div className="dialog-shadow" onClick={close}></div>
@@ -91,9 +80,8 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                     <QuantityInput quantityRelated={quantityRelated} />
 
                     {hasToppings(openFood) && <div>
-
-                        <div>Current Toppings</div>
-                        <ListDefaultTps defaultTps={openFood.defaultToppings} checkDefaultTps={checkDefaultTps} openFood={openFood} setOpenFood={setOpenFood} />
+                        {openFood.defaultToppings.length !== 0 && <><div>Current Toppings</div>
+                            <ListDefaultTps defaultTps={openFood.defaultToppings} checkDefaultTps={checkDefaultTps} openFood={openFood} setOpenFood={setOpenFood} /></>}
                         <div> Extra Toppings </div>
                         <Toppings toppings={toppings} checkToppings={checkToppings} />
                     </div>}

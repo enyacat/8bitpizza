@@ -71,7 +71,7 @@ export function Order({ orders, setOrders, onRemove }) {
                                     <div />
                                 </>}
                                 <div />
-                                <button type="button" className="nes-btn is-error" onClick={() => onRemove(i)}>Remove</button>
+                                <button type="button" className="nes-btn is-error remove" onClick={() => onRemove(i)}>Remove</button>
                                 <div />
                                 <div />
                             </div>
@@ -93,6 +93,9 @@ export function Order({ orders, setOrders, onRemove }) {
                             <div>{formatPrice(GST)}</div>
                         </div>
                     </div>
+                    <button type="button" className="nes-btn is-success pay">Pay</button>
+                    {" "}
+                    <div>{" "}</div>
                 </div>)
 
 
