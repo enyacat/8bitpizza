@@ -4,20 +4,29 @@ import { formatPrice } from "../Data/FoodData"
 import { foodItems } from "../Data/FoodData"
 import { openFood, setOpenFood } from "../App"
 
-const toppingList = [{ checked: false, section: "Base", name: "Gluten Free Base", price: 4 }, { checked: false, section: "Garnish", name: "Chilli Flakes", price: 0 }, { checked: false, section: "Garnish", name: "Oregano", price: 0 }, { checked: false, section: "Garnish", name: "Peri-Peri Sauce Base", price: 1 }, { checked: false, section: "Garnish", name: "Pesto Aioli", price: 1 }, { checked: false, section: "Garnish", name: "Mint Yoghurt", price: 1 }, { checked: false, section: "Cheese", name: "Cheese", price: 2 }, { checked: false, section: "Cheese", name: "Feta Cheese", price: 2 }, { checked: false, section: "Cheese", name: "Parmesan Cheese", price: 1 }, { checked: false, section: "Sauce", name: "BBQ Sauce Base", price: 0 }, { checked: false, section: "Sauce", name: "Garlic Base", price: 0 }, { checked: false, section: "Sauce", name: "Hot Chili Sauce Base", price: 0 }, { checked: false, section: "Sauce", name: "Napolitana Sauce", price: 0 }, { checked: false, section: "Sauce", name: "Tandoori Sauce Base", price: 0 }, { checked: false, section: "Sauce", name: "Tomato Base", price: 0 }, { checked: false, section: "Sauce", name: "Sweet Chilli Sauce", price: 0 }, { checked: false, section: "Meat", name: "Bacon", price: 2 }, { checked: false, section: "Meat", name: "Beef", price: 2 }, { checked: false, section: "Meat", name: "Cabanossi", price: 2 }, { checked: false, section: "Meat", name: "Chicken", price: 2 }, { checked: false, section: "Meat", name: "Egg", price: 2 }, { checked: false, section: 'Meat', name: "Ham", price: 2 }, { checked: false, section: "Meat", name: "Hot Pepperoni", price: 2 }, { checked: false, section: "Seafood", name: "Anchovies", price: 2 }, { checked: false, section: "Seafood", name: "Prawns", price: 3 }, { checked: false, section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Eggplant", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Jalapenos", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Olives", price: 1 }, { checked: false, section: 'Veggies&Fruits', name: "Onions", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Roasted Eggplant", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Shallots", price: 1 }, { checked: false, section: "Veggies&Fruits", name: "Sundried Tomato", price: 1 }]
+const toppingList = [{ section: "Base", name: "Gluten Free Base", price: 4 }, { section: "Garnish", name: "Chilli Flakes", price: 0 }, { section: "Garnish", name: "Oregano", price: 0 }, { section: "Garnish", name: "Peri-Peri Sauce Base", price: 1 }, { section: "Garnish", name: "Pesto Aioli", price: 1 }, { section: "Garnish", name: "Mint Yoghurt", price: 1 }, { section: "Cheese", name: "Cheese", price: 2 }, { section: "Cheese", name: "Feta Cheese", price: 2 }, { section: "Cheese", name: "Parmesan Cheese", price: 1 }, { section: "Sauce", name: "BBQ Sauce Base", price: 0 }, { section: "Sauce", name: "Garlic Base", price: 0 }, { section: "Sauce", name: "Hot Chili Sauce Base", price: 0 }, { section: "Sauce", name: "Napolitana Sauce", price: 0 }, { section: "Sauce", name: "Tandoori Sauce Base", price: 0 }, { section: "Sauce", name: "Tomato Base", price: 0 }, { section: "Sauce", name: "Sweet Chilli Sauce", price: 0 }, { section: "Meat", name: "Bacon", price: 2 }, { section: "Meat", name: "Beef", price: 2 }, { section: "Meat", name: "Cabanossi", price: 2 }, { section: "Meat", name: "Chicken", price: 2 }, { section: "Meat", name: "Egg", price: 2 }, { section: 'Meat', name: "Ham", price: 2 }, { section: "Meat", name: "Hot Pepperoni", price: 2 }, { section: "Seafood", name: "Anchovies", price: 2 }, { section: "Seafood", name: "Prawns", price: 3 }, { section: "Veggies&Fruits", name: "Capsicum", price: 1 }, { section: "Veggies&Fruits", name: "Eggplant", price: 1 }, { section: "Veggies&Fruits", name: "Fresh Tomato", price: 1 }, { section: "Veggies&Fruits", name: "Jalapenos", price: 1 }, { section: "Veggies&Fruits", name: "Mushroom", price: 1 }, { section: "Veggies&Fruits", name: "Olives", price: 1 }, { section: 'Veggies&Fruits', name: "Onions", price: 1 }, { section: "Veggies&Fruits", name: "Pineapple", price: 1 }, { section: "Veggies&Fruits", name: "Roasted Eggplant", price: 1 }, { section: "Veggies&Fruits", name: "Shallots", price: 1 }, { section: "Veggies&Fruits", name: "Sundried Tomato", price: 1 }]
+
 
 // const getDefaultToppings = () => {
 //     return toppingList.reduce((res, topping) => {
 //         if (!res[topping.section]) {
 //             res[topping.section] = [];
 //         }
-//         res[topping.section].push({ name: topping.name, checked: false, price: topping.price })
+//         res[topping.section].push({ name: topping.name,checked: false, price: topping.price })
 //         return res;
 //     }, {});
 // }
+export function getToppingList() {
+    return toppingList.map(topping => ({
+        name: topping.name,
+        section: topping.section,
+        checked: false,
+        price: topping.price
+    }))
+}
 
 export function useToppings() {
-    const [toppings, setToppings] = useState(toppingList)
+    const [toppings, setToppings] = useState(getToppingList())
     const [defaultTps, setDefaultTps] = useState([])
 
     function checkToppings(index) {
@@ -63,15 +72,15 @@ export function Toppings({ toppings, checkToppings }) {
                     <div key={topping.name}>
                         <><div>{(i === 0 || topping.section !== toppings[i - 1].section) ? <div className="topping-section">{topping.section}</div> : null}</div></>
                         <div className="toppings">
-                            <input type="checkbox" className="topping-checkbox" checked={topping.checked} onChange={() => { checkToppings(i) }} />
-
+                            <input type="checkbox" className="topping-checkbox nes-pointer" checked={topping.checked} onChange={() => { checkToppings(i) }} />
                             <div>{topping.name}</div>
                             <div>{formatPrice(topping.price)}</div>
                         </div>
                     </div>
                 )
-            )}
-        </div>
+            )
+            }
+        </div >
     )
 }
 
@@ -95,7 +104,7 @@ export function ListDefaultTps({ defaultTps, checkDefaultTps, setOpenFood, openF
             {openFood.defaultToppings.map(
                 (topping, i) => (
                     <div key={topping.name} className="toppings">
-                        <input type="checkbox" className="topping-checkbox" checked={topping.checked} onChange={() => { checkDefaultTps(i) }} />
+                        <input type="checkbox" className="topping-checkbox nes-pointer" checked={topping.checked} onChange={() => { checkDefaultTps(i) }} />
                         <div>{topping.name}</div>
                     </div>
                 )

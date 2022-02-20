@@ -8,9 +8,8 @@ export default function Menu({ setOpenFood }) {
 
     return (
         <div className='menu'>
-
             {Object.entries(foods).map(([sectionName, foods]) => (
-                <div key={sectionName} >
+                <div className='section-name' key={sectionName} >
                     <hr />
                     <h1 id={sectionName}>{sectionName}</h1>
                     <div className="food-grid nes-pointer">

@@ -2,14 +2,19 @@ import React from "react";
 import "./Order.css"
 import { formatPrice } from "../Data/FoodData";
 import { getPrice } from "./FoodDialog"
+import { useState } from "react";
 
 
-export function Order({ orders, setOrders, onRemove }) {
+export function Order({ orders, setOrders, onRemove, setOpenFood, isActive }) {
+
+
 
     const total = orders.reduce((total, order) => {
         return total + getPrice(order);
     }, 0);
     const GST = (total / 11);
+
+
     // const onRemove = (idx) => {
     // let orderArr = []
     // for (let i = 0; i < idx; i++) {
@@ -46,7 +51,7 @@ export function Order({ orders, setOrders, onRemove }) {
         return food.section.includes('pizza');
     }
 
-    return (< div className="nes-container is-rounded order-area" >
+    return (< div className={isActive ? "nes-container is-rounded order-area" : "nes-container is-rounded order-area.hidden"} >
 
         {
             orders.length === 0 ? (
@@ -59,19 +64,18 @@ export function Order({ orders, setOrders, onRemove }) {
                             <div className="order-item">
                                 <div>{order.quantity}</div>
                                 <div>{order.name}</div>
-                                <div>{order.choice}</div>
+                                <div><img src="/img/edit.png" alt="" width="30rem" height="30rem" className="nes-pointer" onClick={() => { setOpenFood({ ...order, index: i }) }} /></div>
+                                <div><img src="/img/bin.png" alt="" width="30rem" height="30rem" className="nes-pointer" onClick={() => onRemove(i)} /></div>
+                                <div>{order.choice && order.choice}</div>
                                 <div>{formatPrice(getPrice(order))}</div>
                                 {hasToppings(order) && <><div></div>
-                                    <div>- 1 x  {order.defaultToppings.filter(t => (t.checked === false)).map(t => t.name).join(',')}</div>
-                                    <div />
-                                    <div />
+                                    <div className="detailed-items">- 1 x  {order.defaultToppings.filter(t => (t.checked === false)).map(t => t.name).join(',')}</div>
                                     <div>Extra</div>
-                                    <div>{order.toppings.filter(topping => topping.checked).map(t => t.name).join(',')}</div>
+                                    <div className="detailed-items">{order.toppings.filter(topping => topping.checked).map(t => t.name).join(',')}</div>
                                     <div />
                                     <div />
                                 </>}
                                 <div />
-                                <button type="button" className="nes-btn is-error remove" onClick={() => onRemove(i)}>Remove</button>
                                 <div />
                                 <div />
                             </div>

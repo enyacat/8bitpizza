@@ -1,10 +1,11 @@
 .topping-checkbox {
-    margin-right: 10px;
-    cursor: pointer;
+    margin-right: 1vw;
+    width: 1vw;
+    height: 1vw;
 }
 
 .topping-content {
-    height: 10rem;
+    height: 10vw;
     overflow: scroll;
 }
 
@@ -14,5 +15,5 @@
 }
 
 .topping-section {
-    font-size: 1.5rem;
+    font-size: 1vw;
 }

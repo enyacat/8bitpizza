@@ -9,11 +9,34 @@
 
 * { font-family: 'kongtextregular', Arial, sans-serif; }
 
+.container {
+  position: relative;
+  background-image: url('tv.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vw;
+  background-size: cover;
+}
 
-
-
+/* .tv {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+} */
 
 .App {
-  padding-top: 4rem; 
-  height: 820vh;
+  padding-top: 6vw; 
+  height: 55vw;
+  /* border: 1rem darkblue solid; */
+  width: 73vw;
+  overflow: auto;
+  position: absolute;
+  left: 9vw;
+  top: calc(100% * 3.7/10)
+}
+
+.main {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -1,6 +1,6 @@
 .quantity-input {
-    font-size: 18px;
-    width: 60px;
+    font-size: 1vw;
+    width: 3.5vw;
     text-align: center;
     border: none;
     outline: none;
@@ -8,13 +8,13 @@
 
 .increment-container {
     display: flex;
-    height: 45px;
+    height: 2.5vw;
     align-items: center;
 }
 
 .increment-button {
-    width: 40px;
-    height: 40px;
+    width: 2vw;
+    height: 2vw;
     align-items: center;
     justify-content: center;
 }

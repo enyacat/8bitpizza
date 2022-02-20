@@ -5,7 +5,7 @@ import { useState } from "react";
 import { formatPrice } from "../Data/FoodData";
 import { QuantityInput } from "./QuantityInput";
 import { useToppings } from "./Toppings"
-import { Toppings } from "./Toppings"
+import { Toppings, getToppingList } from "./Toppings"
 import { ListDefaultTps } from "./Toppings"
 import { Choices } from "./Choices"
 
@@ -35,14 +35,10 @@ export function getPrice(order) {
     return order.quantity * (order.price + tPrice)
 }
 
-function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, toppings, checkToppings, defaultTps, checkDefaultTps }) {
+function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, toppings, checkToppings, setToppings, defaultTps, checkDefaultTps }) {
     const quantityRelated = useQuantity(openFood && openFood.quantity);
     const [choiceValue, setChoiceValue] = useState(openFood.choices)
-
-    function close() {
-        setOpenFood();
-    }
-
+    const isEditing = openFood.index > -1;
     const order = {
         ...openFood,
         quantity: quantityRelated.value,
@@ -50,9 +46,22 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
         choice: choiceValue
     }
 
+    function close() {
+        setOpenFood();
+    }
+
     function addToOrder() {
         setOrders([...orders, order]);
         close();
+    }
+
+    function editOrder() {
+        let newOrders = [...orders]
+        newOrders[openFood.index] = order;
+        setOrders(newOrders);
+        close();
+
+        // setOrders(...newOrders, newOrders.map((order, idx) => { if (idx === openFood.index) return order }))
     }
     if (!openFood) return null;
 
@@ -60,9 +69,8 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
         return food.section.includes('pizza');
     }
 
-
     return (
-        openFood ? (<>
+        openFood ? (<div className="food-dialog">
             <div className="dialog-shadow" onClick={close}></div>
             <div className="dialog">
                 <div className="dialog-banner" style={{
@@ -84,11 +92,11 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                     </div>}
                 </div>
                 <div className="dialog-footer">
-                    <button type="button" className="nes-btn is-error" disabled={openFood.choices && !openFood.choice} onClick={addToOrder}>Add to order:{formatPrice(getPrice(order))}
+                    <button type="button" className="nes-btn is-error" onClick={isEditing ? editOrder : addToOrder}>{isEditing ? "Update order: " : "Add to order: "}{formatPrice(getPrice(order))}
                     </button>
                 </div>
             </div>
-        </>
+        </div>
         ) : null
     );
 

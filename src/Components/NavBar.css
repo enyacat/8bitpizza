@@ -1,17 +1,23 @@
-.nav-bar-container {
+#nav-bar-container {
     top: 0;
-    position: fixed;
-    width: 100vw;
-    height: 4rem;
+    position: absolute;
+    width: 100%;
+    height: 6vw;
     background-color: gold;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    font-size: 1vw;
+    /* float: left; */
     z-index: 15;
     justify-content: space-around;
+    border-bottom: 0.5vw solid darkorange;
+    border-right: 0.5vw solid darkorange;
+    border-left: 0.5vw solid black;
+    border-top: 0.3vw solid black;
 }
 
 .nav-bar-container div:hover {
-    background-color: darkorange;
+    background-color: goldenrod;
 }
 
 .nav-bar {
@@ -19,9 +25,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    text-overflow: ellipsis;
-    overflow: hidden
+    font-size: 1vw;
+    /* text-overflow: ellipsis;
+    overflow: hidden */
 }
 .nav-bar a{
   color: black;
@@ -31,62 +37,62 @@
 #Starters::before {
     content: "";
     display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+    height: cal(6vw + 35vw); /* fixed header height*/
+    margin: -cal(6vw + 40vw) 0 0; /* negative fixed header height */
   }
 
 #Traditional-pizza::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }
 
 #Gourmet-pizza::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }
 
 #Seafood-pizza::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }
 
 #Pasta::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }
 
 #Salads::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }
 
 #Desserts::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }
 
 #Deals::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }
 
 #Beverages::before {
-    content: "";
-    display: block;
-    height: 4rem; /* fixed header height*/
-    margin: -4rem 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: cal(6vw + 35vw);
+  margin: -cal(6vw + 40vw) 0 0;
   }

@@ -9,6 +9,12 @@
     overflow: scroll;
 }
 
+@media(max-width: 400px){ 
+    .dialog{width: 100%; 
+    left: 0px; 
+    z-index: 12;
+    }
+}
 .dialog-shadow {
     position: fixed;
     height: 100%;
@@ -29,21 +35,21 @@
 .dialog-banner-name {
     position: absolute;
     background-color: rgb(255 255 255 / 70%);
-    top: 100px;
-    font-size: 30px;
-    padding: 5px 40px;
+    top: 5vw;
+    font-size: 2vw;
+    padding: 0.33vw 2.5vw;
 }
 
 .dialog-content {
     overflow: auto;
-    min-height: 100px;
-    padding: 0px 40px;
-    padding-bottom: 80px;
+    min-height: 1vw;
+    padding: 0vw 2.5vw;
+    padding-bottom: 1.2vw;
 }
 
 .dialog-footer {
     box-shadow: 0px -2px 10px 0px grey;
-    height: 60px;
+    height: 3.5vw;
     display: flex;
     justify-content: center;
     background-color: #ffffff;
@@ -51,23 +57,24 @@
 
 .dialog-footer button:disabled {
     cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .ingredient {
-    height: 2rem;
+    height: 2vw;
     width: 100%;
-    padding: 3px;
+    padding: 1vw;
     transition: all 0.5s ease;
     border: none;
 }
 
 .ingredient:hover {
-    height: 6rem;
+    height: 6vw;
 }
 
 .choice {
     background-color:#ff7f50;
-    padding: 1rem 0;
+    padding: 1vw 0;
 }
 
 .choice:hover {

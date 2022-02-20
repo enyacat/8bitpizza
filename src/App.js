@@ -13,20 +13,26 @@ function App() {
   const [openFood, setOpenFood] = useState();
   const [orders, setOrders] = useState([]);
   const { toppings, setToppings, checkToppings, checkDefaultTps, defaultTps, setDefaultTps } = useToppings();
+  const [isActive, setActive] = useState(true);
+
+
   const onRemove = (idx) => {
-    var orderArr = [...orders]
+    let orderArr = [...orders]
     orderArr.splice(idx, 1)
     setOrders(orderArr)
   }
 
+
   return (
-    <div>
+    <div className='container'>
       <div className="App">
         <Title />
-        <NavBar />
+        <NavBar setActive={setActive} isActive={isActive} />
         <FoodDialog openFood={openFood} setOpenFood={setOpenFood} orders={orders} setOrders={setOrders} toppings={toppings} setToppings={setToppings} checkToppings={checkToppings} defaultTps={defaultTps} checkDefaultTps={checkDefaultTps} />
-        <Menu setOpenFood={setOpenFood} setDefaultTps={setDefaultTps} />
-        <Order orders={orders} setOrders={setOrders} onRemove={onRemove} />
+        <main>
+          <Menu setOpenFood={setOpenFood} setDefaultTps={setDefaultTps} />
+          <Order orders={orders} setOrders={setOrders} onRemove={onRemove} setOpenFood={setOpenFood} openFood={openFood} isActive={isActive} />
+        </main>
       </div>
     </div>
   )
