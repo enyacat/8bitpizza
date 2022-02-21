@@ -70,7 +70,7 @@ export const foodItems = [
     },
     {
         name: 'Oz',
-        img: '/img/traditional/Oz.jpeg',
+        img: '/img/traditional/OZ.jpeg',
         section: 'Traditional-pizza',
         ingredients: 'Ham, Bacon, Egg',
         price: 13,
