@@ -37,7 +37,7 @@ export function getPrice(order) {
 
 function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, toppings, checkToppings, setToppings, defaultTps, checkDefaultTps }) {
     const quantityRelated = useQuantity(openFood && openFood.quantity);
-    const [choiceValue, setChoiceValue] = useState("Family")
+    const [choiceValue, setChoiceValue] = useState(openFood.choice)
     const isEditing = openFood.index > -1;
     const order = {
         ...openFood,
@@ -82,7 +82,8 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                 <div className="dialog-content">
                     {openFood.ingredients && <div>Ingredient: <textarea className="ingredient">{openFood.ingredients}</textarea></div>}
                     {openFood.choices && <div className="choice">
-                        <Choices openFood={openFood} choiceValue={choiceValue} setChoiceValue={setChoiceValue} setOpenFood={setOpenFood} /></div>}
+                        <Choices openFood={openFood} choiceValue={choiceValue} setChoiceValue={setChoiceValue} setOpenFood={setOpenFood} /></div>
+                    }
                     <QuantityInput quantityRelated={quantityRelated} />
 
                     {hasToppings(openFood) && <div>
@@ -93,7 +94,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
                     </div>}
                 </div>
                 <div className="dialog-footer">
-                    <button type="button" className="nes-btn is-error" onClick={isEditing ? editOrder : addToOrder}>{isEditing ? "Update order: " : "Add to order: "}{formatPrice(getPrice(order))}
+                    <button type="button" className="nes-btn is-error" disabled={openFood.choices && !choiceValue} onClick={isEditing ? editOrder : addToOrder}>{isEditing ? "Update order: " : "Add to order: "}{formatPrice(getPrice(order))}
                     </button>
                 </div>
             </div>

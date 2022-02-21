@@ -42,6 +42,7 @@ export function Choices({ openFood, choiceValue, setChoiceValue, setOpenFood }) 
         }
     }
     console.log(openFood.choices)
+    console.log('openFood.choice is ...', openFood.choice)
     console.log('choiceValue is...', choiceValue)
     return (
         <div className="size">
@@ -52,7 +53,7 @@ export function Choices({ openFood, choiceValue, setChoiceValue, setOpenFood }) 
                             type="radio"
                             id={choice}
                             className="nes-radio"
-                            name="answer"
+                            name="choice"
                             value={choice}
                             checked={choice === choiceValue}
                             onChange={(e) => {
