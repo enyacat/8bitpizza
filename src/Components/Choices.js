@@ -39,6 +39,8 @@ export function Choices({ openFood, choiceValue, setChoiceValue, setOpenFood }) 
             } else if (e.target.value === "Family") {
                 setOpenFood({ ...openFood, price: 20, choice: "Family" })
             }
+        } else {
+            setOpenFood({ ...openFood, choice: choiceValue })
         }
     }
     console.log(openFood.choices)

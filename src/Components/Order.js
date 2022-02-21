@@ -64,8 +64,10 @@ export function Order({ orders, setOrders, onRemove, setOpenFood, isActive }) {
                             <div className="order-item">
                                 <div>{order.quantity}</div>
                                 <div>{order.name}</div>
-                                <div><img src="/img/edit.png" alt="" width="30rem" height="30rem" className="nes-pointer" onClick={() => { setOpenFood({ ...order, index: i }) }} /></div>
-                                <div><img src="/img/bin.png" alt="" width="30rem" height="30rem" className="nes-pointer" onClick={() => onRemove(i)} /></div>
+                                <div><img src="/img/edit.png" alt="" width="30vw" height="30vw" className="nes-pointer" onClick={() => { setOpenFood({ ...order, index: i }) }} /></div>
+                                <div>
+                                    <img src="/img/bin.png" alt="" width="30vw" height="30vw" className="nes-pointer" onClick={() => onRemove(i)} />
+                                </div>
                                 <div>{order.choice && order.choice}</div>
                                 <div>{formatPrice(getPrice(order))}</div>
                                 {hasToppings(order) && <><div></div>

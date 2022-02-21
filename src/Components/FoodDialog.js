@@ -28,10 +28,13 @@ function useQuantity(defaultQuantity) {
 }
 
 export function getPrice(order) {
-    const tPrice = order.toppings
-        .filter(t => t.checked)
-        .map(t => t.price)
-        .reduce((totalTPrice, price) => totalTPrice + price, 0)
+    var tPrice = "";
+    if (order.toppings) {
+        tPrice = order.toppings
+            .filter(t => t.checked)
+            .map(t => t.price)
+            .reduce((totalTPrice, price) => totalTPrice + price, 0)
+    }
     return order.quantity * (order.price + tPrice)
 }
 
@@ -39,11 +42,22 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
     const quantityRelated = useQuantity(openFood && openFood.quantity);
     const [choiceValue, setChoiceValue] = useState(openFood.choice)
     const isEditing = openFood.index > -1;
-    const order = {
-        ...openFood,
-        quantity: quantityRelated.value,
-        toppings: toppings,
-        choice: choiceValue
+    var order;
+    const getOpenFoodToppings = useToppings(openFood.toppings)
+
+    if (hasToppings(openFood)) {
+        order = {
+            ...openFood,
+            quantity: quantityRelated.value,
+            toppings: getOpenFoodToppings.toppings,
+            choice: choiceValue
+        }
+    } else {
+        order = {
+            ...openFood,
+            quantity: quantityRelated.value,
+            choice: choiceValue
+        }
     }
 
     function close() {
@@ -53,7 +67,6 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
     function addToOrder() {
         setOrders([...orders, order]);
         close();
-        setToppings(getToppingList())
     }
 
     function editOrder() {

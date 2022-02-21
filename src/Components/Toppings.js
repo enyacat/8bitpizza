@@ -17,29 +17,29 @@ const toppingList = [{ section: "Base", name: "Gluten Free Base", price: 4 }, { 
 //     }, {});
 // }
 export function getToppingList() {
-    const tList = [...toppingList]
-    return tList.map(topping => ({
-        name: topping.name,
-        section: topping.section,
-        checked: false,
-        price: topping.price
+    return toppingList.map(topping => ({
+        ...topping,
+        checked: false
     }))
 }
 
-export function useToppings() {
-    const [toppings, setToppings] = useState(getToppingList())
+export function useToppings(defaultToppings) {
+    const [toppings, setToppings] = useState(defaultToppings || getToppingList())
     const [defaultTps, setDefaultTps] = useState([])
 
     function checkToppings(index) {
-        setToppings(prevItems => {
-            return prevItems.map((item, idx) => {
-                if (idx === index) {
-                    return { ...item, checked: !item.checked }
-                } else {
-                    return item
-                }
-            })
-        })
+        const newToppings = [...toppings]
+        newToppings[index].checked = !newToppings[index].checked;
+        setToppings(newToppings)
+        // setToppings(prevItems => {
+        //     return prevItems.map((item, idx) => {
+        //         if (idx === index) {
+        //             return { ...item, checked: !item.checked }
+        //         } else {
+        //             return item
+        //         }
+        //     })
+        // })
     }
 
 
