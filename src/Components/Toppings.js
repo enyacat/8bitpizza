@@ -17,7 +17,8 @@ const toppingList = [{ section: "Base", name: "Gluten Free Base", price: 4 }, { 
 //     }, {});
 // }
 export function getToppingList() {
-    return toppingList.map(topping => ({
+    const tList = [...toppingList]
+    return tList.map(topping => ({
         name: topping.name,
         section: topping.section,
         checked: false,

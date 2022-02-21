@@ -37,7 +37,7 @@ export function getPrice(order) {
 
 function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, toppings, checkToppings, setToppings, defaultTps, checkDefaultTps }) {
     const quantityRelated = useQuantity(openFood && openFood.quantity);
-    const [choiceValue, setChoiceValue] = useState(openFood.choices)
+    const [choiceValue, setChoiceValue] = useState("Family")
     const isEditing = openFood.index > -1;
     const order = {
         ...openFood,
@@ -53,6 +53,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
     function addToOrder() {
         setOrders([...orders, order]);
         close();
+        setToppings(getToppingList())
     }
 
     function editOrder() {
