@@ -10,9 +10,6 @@ export default function Title({ isActive }) {
                 {!isActive && <><a href="https://github.com/enyacat/8bitpizza" target="_blank"><i class="nes-octocat animate" src=""></i></a></>}
                 <div><iframe src="https://giphy.com/embed/2KWdyAGiaMVbi" width="50" height="50" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pizza-8-bit-gif-2KWdyAGiaMVbi"></a></p></div>
             </div>
-
         </section>
-
     )
-
 }

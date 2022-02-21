@@ -1,5 +1,5 @@
 # 8 bit pizza - a React Pizza shop
-- This is a pizza shop, 8 bit style. My intention was to remake a pizza shop website http://pizza2go.net.au/
+- This is a pizza shop, 8 bit style, can be accessed here https://eight-bit-pizza.herokuapp.com/. My intention was to remake a pizza shop website http://pizza2go.net.au/
 
 ## Available Scripts
 
