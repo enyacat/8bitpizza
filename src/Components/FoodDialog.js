@@ -43,13 +43,13 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders, topping
     const [choiceValue, setChoiceValue] = useState(openFood.choice)
     const isEditing = openFood.index > -1;
     var order;
-    const getOpenFoodToppings = useToppings(openFood.toppings)
+
 
     if (hasToppings(openFood)) {
         order = {
             ...openFood,
             quantity: quantityRelated.value,
-            toppings: getOpenFoodToppings.toppings,
+            toppings: toppings,
             choice: choiceValue
         }
     } else {

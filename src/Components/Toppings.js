@@ -23,23 +23,23 @@ export function getToppingList() {
     }))
 }
 
-export function useToppings(defaultToppings) {
-    const [toppings, setToppings] = useState(defaultToppings || getToppingList())
+export function useToppings() {
+    const [toppings, setToppings] = useState(getToppingList())
     const [defaultTps, setDefaultTps] = useState([])
 
     function checkToppings(index) {
-        const newToppings = [...toppings]
-        newToppings[index].checked = !newToppings[index].checked;
-        setToppings(newToppings)
-        // setToppings(prevItems => {
-        //     return prevItems.map((item, idx) => {
-        //         if (idx === index) {
-        //             return { ...item, checked: !item.checked }
-        //         } else {
-        //             return item
-        //         }
-        //     })
-        // })
+        // const newToppings = [...toppings]
+        // newToppings[index].checked = !newToppings[index].checked;
+        // setToppings(newToppings)
+        setToppings(prevItems => {
+            return prevItems.map((item, idx) => {
+                if (idx === index) {
+                    return { ...item, checked: !item.checked }
+                } else {
+                    return item
+                }
+            })
+        })
     }
 
 
