@@ -9,6 +9,7 @@ import { FoodDialog } from './Components/FoodDialog'
 import { useToppings } from './Components/Toppings'
 import { NavBar } from './Components/NavBar'
 
+
 function App() {
   const [openFood, setOpenFood] = useState();
   const [orders, setOrders] = useState([]);
@@ -32,8 +33,10 @@ function App() {
         <main>
           <Menu setOpenFood={setOpenFood} setDefaultTps={setDefaultTps} />
           <Order orders={orders} setOrders={setOrders} onRemove={onRemove} setOpenFood={setOpenFood} openFood={openFood} isActive={isActive} />
+          <div className="upper-arrow-wrapper"><div className='fixed'><a className="nes-pointer" href="#nav-bar-container"><img src="/img/upperarrow.png" alt="" width="50vw" height="60vw" /></a></div></div>
         </main>
       </div>
+
     </div>
   )
 }

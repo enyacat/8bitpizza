@@ -1,5 +1,6 @@
 .menu {
     margin: 0px 30vw 5vw 5vw;
+    position: relative;
     padding-bottom: 2vw;
     width: 55vw;
     flex-grow: 3;
@@ -49,4 +50,17 @@
     padding: 0.05vw;
     font-size: 1vw;
     max-height: 10vh;
+}
+
+.upper-arrow {
+    position: absolute;
+    left: 5vw;
+    top: 10vw;
+}
+
+.upper-arrow img {
+    position: fixed;
+    width: 50vw;
+    height: 60vw;
+    z-index: 20;
 }

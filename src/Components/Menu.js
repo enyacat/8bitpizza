@@ -34,6 +34,7 @@ export default function Menu({ setOpenFood }) {
                 </div>)
             )
             }
+
         </div >
     )
 }

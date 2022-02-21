@@ -1,14 +1,3 @@
-.cartoon-fig {
-    position: fixed;
-    top: 30vw;
-}
-
-.cartoon-fig img {
-    width: 5vw;
-    height: 6vw;
-    z-index: 20;
-}
-
 .nes-balloon {
     margin-left: 20vw; 
 }
