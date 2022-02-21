@@ -15,7 +15,7 @@ export function NavBar({ setActive, isActive }) {
         <div className="nav-bar"><a href="#Salads">Salads</a></div>
         <div className="nav-bar"><a href="#Deals">Deals</a></div>
         <div className="nav-bar"><a href="#Beverages">Beverages</a>
-            <button type="button" className="nes-btn is-warning" onClick={toggleClass}><img src="/img/shoppingCart.svg" alt="" width="20vw" height="20vw" /></button>
+            <div><button type="button" className="nes-btn is-warning" onClick={toggleClass}><img src="/img/shoppingCart.svg" alt="" width="20vw" height="20vw" /></button></div>
         </div>
     </div>)
 }

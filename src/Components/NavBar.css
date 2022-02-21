@@ -9,7 +9,7 @@
     font-size: 1vw;
     /* float: left; */
     z-index: 15;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-bottom: 0.5vw solid darkorange;
     border-right: 0.5vw solid darkorange;
     border-left: 0.5vw solid black;
@@ -22,16 +22,30 @@
 
 .nav-bar {
     display: flex;
+    padding: 0 2vw;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-size: 1vw;
+    max-height: 6vw;
     /* text-overflow: ellipsis;
     overflow: hidden */
+    /* border-right: 0.2vw solid goldenrod; */
 }
+
+.nav-bar:hover {
+  background-color: goldenrod;
+}
+
 .nav-bar a{
   color: black;
   text-decoration: none;
+}
+
+.nav-bar button{
+  max-height: 3vw;
+  align-items: center;
+  justify-content: center;
 }
 
 #Starters::before {
