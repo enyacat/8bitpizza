@@ -27,7 +27,7 @@ function App() {
   return (
     <div className='container'>
       <div className="App">
-        <Title />
+        <Title isActive={isActive} />
         <NavBar setActive={setActive} isActive={isActive} />
         <FoodDialog openFood={openFood} setOpenFood={setOpenFood} orders={orders} setOrders={setOrders} toppings={toppings} setToppings={setToppings} checkToppings={checkToppings} defaultTps={defaultTps} checkDefaultTps={checkDefaultTps} />
         <main>
