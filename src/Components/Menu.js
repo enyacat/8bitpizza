@@ -1,9 +1,10 @@
-import React from "react";
-import "./Menu.css";
-import { foods } from "../Data/FoodData";
-import { formatPrice } from "../Data/FoodData";
+import React, { useContext } from 'react';
+import './Menu.css';
+import { formatPrice } from '../Data/FoodData';
+import { StateContext } from '../store/StateProvider';
 
-export default function Menu({ setOpenFood }) {
+export default function Menu() {
+  const { foods, setOpenFood } = useContext(StateContext);
   return (
     <div className='menu'>
       {Object.entries(foods).map(([sectionName, foods]) => (
