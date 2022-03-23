@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { StateContext } from '../store/StateProvider';
+import './Choices.css';
 
 export function Choices() {
   const { openFood, choiceValue, setChoiceValue, setOpenFood } =
@@ -45,8 +46,8 @@ export function Choices() {
   return (
     <div className='size'>
       {openFood.choices.map((choice) => (
-        <>
-          <label for={choice}>
+        <div key={choice}>
+          <label>
             <input
               type='radio'
               id={choice}
@@ -60,7 +61,7 @@ export function Choices() {
             />
             <span>{choice}</span>
           </label>{' '}
-        </>
+        </div>
       ))}
     </div>
   );

@@ -111,7 +111,10 @@ function FoodDialogContainer() {
           {openFood.ingredients && (
             <div>
               Ingredient:{' '}
-              <textarea className='ingredient'>{openFood.ingredients}</textarea>
+              <textarea
+                className='ingredient'
+                defaultValue={openFood.ingredients}
+              ></textarea>
             </div>
           )}
           {openFood.choices && (

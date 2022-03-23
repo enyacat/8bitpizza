@@ -73,7 +73,7 @@ export function Order() {
         <div className='order-content'>
           <div className='order-container'>Your Order</div>
           {orders.map((order, i) => (
-            <div className='order-container'>
+            <div className='order-container' key={order.id}>
               <div className='order-item'>
                 <div>{order.quantity}</div>
                 <div>{order.name}</div>
